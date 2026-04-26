@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="mg">
+<head>
+    <meta charset="UTF-8">
+     <meta name="monetag" content="3030b7e6caebdb465e463f2f8d1945e2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À quel âge je me marie? 💍 Test Love Mada 2026</title>
+    <meta name="description" content="Fais le test Love Mada pour savoir à quel âge tu vas te marier. Résultat choquant garanti!">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a6f, #ff8e53);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            text-align: center;
+            padding: 15px;
+            color: white;
+            min-height: 100vh;
+        }
+    .container {
+            max-width: 500px;
+            margin: 10px auto;
+            background: white;
+            color: #333;
+            padding: 25px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        h1 { color: #ff6b6b; font-size: 24px; margin-bottom: 8px; }
+     .subtitle { color: #666; margin-bottom: 20px; font-size: 14px; }
+     .question { display: none; }
+     .question.active { display: block; animation: fadeIn 0.3s; }
+        @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+     .question h2 { font-size: 18px; margin-bottom: 18px; color: #333; }
+     .reponse {
+            background: #f8f9fa;
+            border: 2px solid #ff6b6b;
+            padding: 14px;
+            margin: 10px 0;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.2s;
+            font-size: 15px;
+        }
+     .reponse:active {
+            background: #ff6b6b;
+            color: white;
+            transform: scale(0.98);
+        }
+        #resultat {
+            display: none;
+            padding: 10px;
+        }
+        #age {
+            font-size: 70px;
+            color: #ff6b6b;
+            font-weight: bold;
+            margin: 15px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        #message { font-size: 16px; margin: 15px 0; color: #555; }
+        button {
+            background: #25D366;
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            font-size: 17px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 8px 5px;
+            width: 90%;
+            max-width: 300px;
+        }
+    .btn-start { background: #ff6b6b; }
+    .btn-restart { background: #6c757d; }
+    .btn-facebook { background: #1877F2; }
+     .progress {
+            background: #eee;
+            height: 8px;
+            border-radius: 10px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+     .progress-bar {
+            background: #ff6b6b;
+            height: 100%;
+            width: 0%;
+            transition: 0.3s;
+        }
+     .ads { margin: 20px 0; }
+     .defi-text {
+            font-size: 13px;
+            color: #666;
+            margin-top: 15px;
+            line-height: 1.4;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="intro">
+            <h1>💍 À quel âge tu vas te marier? 💍</h1>
+            <p class="subtitle">Réponds à 5 questions et découvre ton destin ❤️</p>
+            <button class="btn-start" onclick="commencer()">Commencer le Test</button>
+
+            <!-- COLLE TON CODE MONETAG ICI - ZONE 1 -->
+            <div class="ads">
+                <!-- Exemple: <script src="//ton-code-monetag.js"></script> -->
+            </div>
+        </div>
+
+        <div class="question" id="q1">
+            <div class="progress"><div class="progress-bar" style="width: 20%"></div></div>
+            <h2>1. Tu préfères quel genre de date?</h2>
+            <div class="reponse" onclick="repondre(1,22)">Dîner romantique aux chandelles 🕯️</div>
+            <div class="reponse" onclick="repondre(1,25)">Sortie entre amis au glacier 🍦</div>
+            <div class="reponse" onclick="repondre(1,28)">Netflix & chill à la maison 📺</div>
+            <div class="reponse" onclick="repondre(1,32)">Voyage surprise à Majunga ✈️</div>
+        </div>
+
+        <div class="question" id="q2">
+            <div class="progress"><div class="progress-bar" style="width: 40%"></div></div>
+            <h2>2. Ton plat préféré?</h2>
+            <div class="reponse" onclick="repondre(2,24)">Romazava bien chaud 🍲</div>
+            <div class="reponse" onclick="repondre(2,26)">Pizza 4 fromages 🍕</div>
+            <div class="reponse" onclick="repondre(2,23)">Vary sy laoka henakisoa 🍚</div>
+            <div class="reponse" onclick="repondre(2,30)">Sushi au resto 🍣</div>
+        </div>
+
+        <div class="question" id="q3">
+            <div class="progress"><div class="progress-bar" style="width: 60%"></div></div>
+            <h2>3. Combien d'enfants tu veux?</h2>
+            <div class="reponse" onclick="repondre(3,27)">0, je veux profiter de la vie 😎</div>
+            <div class="reponse" onclick="repondre(3,25)">1 ou 2, c'est parfait 👶</div>
+            <div class="reponse" onclick="repondre(3,22)">3 ou 4, grande famille 👨‍👩‍👧‍👦</div>
+            <div class="reponse" onclick="repondre(3,35)">Je laisse Dieu décider 🙏</div>
+        </div>
+
+        <div class="question" id="q4">
+            <div class="progress"><div class="progress-bar" style="width: 80%"></div></div>
+            <h2>4. Tu es plutôt?</h2>
+            <div class="reponse" onclick="repondre(4,21)">Fêtard, je sors chaque weekend 🎉</div>
+            <div class="reponse" onclick="repondre(4,26)">Casanière, j'aime mon lit 🛏️</div>
+            <div class="reponse" onclick="repondre(4,24)">Bosseuse, carrière d'abord 💼</div>
+            <div class="reponse" onclick="repondre(4,29)">Spirituelle, église dimanche ⛪</div>
+        </div>
+
+        <div class="question" id="q5">
+            <div class="progress"><div class="progress-bar" style="width: 100%"></div></div>
+            <h2>5. Ton mois de naissance?</h2>
+            <div class="reponse" onclick="repondre(5,23)">Janvier - Mars</div>
+            <div class="reponse" onclick="repondre(5,25)">Avril - Juin</div>
+            <div class="reponse" onclick="repondre(5,27)">Juillet - Septembre</div>
+            <div class="reponse" onclick="repondre(5,26)">Octobre - Décembre</div>
+        </div>
+
+        <div id="resultat">
+            <h2>🎊 Ton Résultat 🎊</h2>
+            <p>Tu vas te marier à l'âge de :</p>
+            <div id="age">25</div>
+            <p id="message">Avec la personne de tes rêves! 💕</p>
+
+            <button class="btn-facebook" onclick="partagerFacebook()">📘 Partager sur Facebook</button>
+            <button onclick="partagerWhatsapp()">📱 Envoyer sur Whatsapp</button>
+            <button class="btn-restart" onclick="recommencer()">🔄 Refaire le test</button>
+
+            <p class="defi-text">
+                👆 Partage ton résultat pour défier tes amies!<br>
+                Celle qui a l'âge le + JEUNE paye le resto 😂💍
+            </p>
+
+            <!-- COLLE TON CODE MONETAG ICI - ZONE 2 -->
+            <div class="ads">
+                <!-- Exemple: <script src="//ton-code-monetag.js"></script> -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let questionActuelle = 0;
+        let totalAge = 0;
+
+        const messages = [
+            "Jeune marié(e)! Tu vas vivre un amour de jeunesse 🔥",
+            "L'âge parfait! Ni trop tôt ni trop tard 💑",
+            "Tu profites de la vie d'abord, puis le grand amour arrive 😎",
+            "Mariage mature = Mariage qui dure 💍",
+            "Dieu a un plan parfait pour toi 🙏✨"
+        ];
+
+        function commencer() {
+            document.getElementById('intro').style.display = 'none';
+            document.getElementById('q1').classList.add('active');
+            questionActuelle = 1;
+        }
+
+        function repondre(q, age) {
+            totalAge += age;
+            document.getElementById('q' + q).classList.remove('active');
+            if (q < 5) {
+                questionActuelle++;
+                document.getElementById('q' + questionActuelle).classList.add('active');
+            } else {
+                afficherResultat();
+            }
+        }
+
+        function afficherResultat() {
+            const ageFinal = Math.round(totalAge / 5);
+            document.getElementById('age').innerText = ageFinal + " ans";
+            let indexMsg = 0;
+            if (ageFinal <= 22) indexMsg = 0;
+            else if (ageFinal <= 25) indexMsg = 1;
+            else if (ageFinal <= 28) indexMsg = 2;
+            else if (ageFinal <= 32) indexMsg = 3;
+            else indexMsg = 4;
+            document.getElementById('message').innerText = messages[indexMsg];
+            document.getElementById('resultat').style.display = 'block';
+        }
+
+        function partagerFacebook() {
+    const age = document.getElementById('age').innerText;
+    const url = "https://omg10.com/4/10926071";
+    
+    // 1. OUVRE TA PUB MONETAG D'ABORD = TU GAGNES DE L'ARGENT
+    window.open(url, "_blank");
+    
+    // 2. APRÈS 1 SECONDE, OUVRE FACEBOOK POUR PARTAGER
+    setTimeout(function() {
+        const texte = "Je viens de faire le test! 💍 Je vais me marier à " + age + "! Toi aussi 👉 https://love-mada.wuaze.com";
+        const fbUrl = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent("https://love-mada.wuaze.com") + "&quote=" + encodeURIComponent(texte);
+        window.open(fbUrl, "_blank");
+    }, 1000);
+}
+
+       function partagerWhatsapp() {
+    const age = document.getElementById('age').innerText;
+    const url = "https://omg10.com/4/10926071";
+    
+    // 1. OUVRE TA PUB MONETAG D'ABORD = TU GAGNES DE L'ARGENT  
+    window.open(url, "_blank");
+    
+    // 2. APRÈS 1 SECONDE, OUVRE WHATSAPP
+    setTimeout(function() {
+        const message = "Je viens de faire le test! 💍 Je vais me marier à " + age + "! Toi aussi fais le test 👉 https://love-mada.wuaze.com";
+        window.open("https://wa.me/?text=" + encodeURIComponent(message), "_blank");
+    }, 1000);
+}
+
+        function recommencer() {
+            totalAge = 0;
+            questionActuelle = 0;
+            document.getElementById('resultat').style.display = 'none';
+            document.querySelectorAll('.question').forEach(q => q.classList.remove('active'));
+            document.getElementById('intro').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
